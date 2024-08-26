@@ -1,9 +1,9 @@
 package Ocp;
 
-public class Moto {
+public class Moto implements Imprimir{
 
-    public void imprimir(String conteudo) {
-        System.out.println("Moto: " + conteudo);
+    public String imprimir(String conteudo) {
+        return "Moto: " + conteudo;
     }
 
 }

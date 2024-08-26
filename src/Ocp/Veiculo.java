@@ -7,7 +7,7 @@ public class Veiculo {
 
     private Imprimir dispositivo;
 
-    public Veiculo(String tipoVeiculo) {
+    public Veiculo(String tipoVeiculo) throws Exception {
         Class classe = null;
         Object objeto = null;
         try {
@@ -15,9 +15,11 @@ public class Veiculo {
             objeto = classe.newInstance();
         } catch (Exception ex) {
             this.dispositivo = null;
+            throw new Exception("Nome digitado incorretamente");
         }
         if (!(objeto instanceof Imprimir)) {
             this.dispositivo = null;
+            throw new Exception("Classe não implementa Imprimir");
         }
         this.dispositivo = (Imprimir) objeto;
     }

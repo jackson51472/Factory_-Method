@@ -2,8 +2,9 @@ package Ocp;
 
 public class Carro implements Imprimir{
 
-    public void imprimir(String conteudo) {
-        System.out.println("Carro: " + conteudo);
+    public String imprimir(String conteudo) {
+
+        return "Carro: " + conteudo;
     }
 
 }
